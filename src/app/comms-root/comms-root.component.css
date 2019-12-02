@@ -1,0 +1,116 @@
+.some-page-wrapper {
+    margin: 10px;
+    /* background-color: red; */
+  }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: silver; */
+    width: 100%;
+  }
+  
+  .column {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+  
+  .left-column {
+    /* background-color: dodgerblue; */
+    height: 800px;
+    width: 100%;
+  }
+  
+  .right-column {
+    /* background-color: silver; */
+    height: 800px;
+    width: 100%;
+  }
+
+  .sub-left-column {
+    /* background-color: green; */
+    padding-left: 250px;
+    margin: 10px;
+    width: 50%;
+    color: dodgerblue;
+    font-weight: bold;
+  }
+  .sub-right-column {
+    /* background-color: orange; */
+    padding-left: 0px;
+    margin: 10px;
+    width: 100%;
+    color: dodgerblue;
+    font-weight: bold;
+  }
+  
+  .sub-full-column {
+    /* background-color: wheat; */
+    height: 50px;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 800px) {
+    .column {
+      flex: 2
+    }
+  
+    .double-column {
+      flex: 2
+    }
+  }
+
+  .frmlabel
+{
+    font-size: 15px;
+    margin-bottom:0.1rem;
+}
+.form-group {
+    margin-bottom: 0.1rem;
+}
+.btncustom{
+    padding-left: 50%;
+
+}
+.spnfooter{
+    font-size: 9px;
+}
+.form-control{
+    font-size: 15px;
+    width: 500px;
+    font-weight: bold;
+    font-family: Calibri;
+}
+
+textarea{
+    height: 150px;
+    min-height: 120px;
+    max-height: 120px;
+    max-width: 280px;
+    min-width: 280px;
+    background-color: aliceblue;
+    font-family: Calibri;
+    font-weight: bold;
+    overflow: auto;
+
+}
+
+
+input,
+select {
+  max-width: 280px;
+  min-width: 280px;
+  height: 25px;
+  background-color: aliceblue;
+  font-family: Calibri;
+  font-weight: bold;
+
+}
+
+.text-danger{
+  color:red;
+  font-family: Calibri;
+}

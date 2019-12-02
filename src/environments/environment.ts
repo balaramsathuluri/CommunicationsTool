@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseurl: 'https://ame-comms-tool-functions.azurewebsites.net',
+  apiendpoint: '/api/GetIncident?incident=',
+  account : '',
+  containerURL : '',
+  ccountKey : '',
+  blobURL : ''
 };
 
 /*

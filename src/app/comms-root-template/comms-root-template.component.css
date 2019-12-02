@@ -1,0 +1,61 @@
+div {
+    display: block;
+}
+
+html {
+    color: -internal-root-color;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    border-spacing: 2px;
+    border-color: grey;
+    font-variant: normal;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+span.propertyvalue1
+{    
+    /* color: #767676;     */
+    font-weight:bold;
+}
+p.MsoNormal{
+    font-size: 11.0pt;
+    font-family: "Calibri",sans-serif;
+    
+    /* margin-bottom: .0001pt; */
+}
+span.propertytitle10 {   
+    color: #767676;
+}

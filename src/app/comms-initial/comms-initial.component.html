@@ -1,0 +1,138 @@
+<form [formGroup]="frm" class="md-form form-sm">
+  <div class='some-page-wrapper'>
+    <div class='row'>
+      <div class='column'>
+        <div class='left-column'>
+          <div class="row">
+            <div class="column">
+              <div class='sub-full-column'></div>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='column'>
+              <div class='sub-left-column' style="font-family: Calibri;">
+                ICM Number
+              </div>
+            </div>
+            <div class='column'>
+              <div class='sub-right-column'>
+                <input type="text"
+                       (focusout)="GetIncedentData($event)"
+                       (keypress)="onlyNumber($event)" name="id" formControlName="id"
+                       class="form-control" placeholder="ICM Number...">
+                <span class="help-block" *ngIf="((frm.get('id').touched ||
+                              frm.get('id').dirty) &&
+                              frm.get('id').errors)">
+                  <small class="help-block" class="text-danger"
+                         *ngIf="frm.get('id').errors.required">
+                    *  ICM Number is required.
+                  </small>
+                </span>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='column'>
+                <div class='sub-left-column' style="font-family: Calibri;">
+                  Customer Name
+                </div>
+              </div>
+
+             <div class='column'>
+                <div class='sub-right-column'>
+                 <input type="text" name="customername" formControlName="customername"
+                  class="form-control" placeholder="Customer Name..."
+                  readonly=true
+                  >
+                </div>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='column'>
+                <div class='sub-left-column' style="font-family: Calibri;">
+                  Type
+                </div>
+              </div>
+              <div class='column'>
+                <div class='sub-right-column'>
+                  <select name="type" formControlName="type" class="form-control"
+                   placeholder="TYPE" >
+                    <option *ngFor="let types of alerttypes" >
+                      {{types}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class='row form-group'>
+              <div class='column'>
+                <div class='sub-left-column' style="font-family: Calibri;">
+                  Subject
+                </div>
+              </div>
+              <div class='column'>
+                <div class='sub-right-column'>
+                  <input type="text" name="subject" formControlName="subject"
+                  class="form-control" placeholder="Subject...">
+                </div>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='column'>
+                <div class='sub-left-column' style="font-family: Calibri;">
+                  Issue Definition
+                </div>
+              </div>
+              <div class='column'>
+                <div class='sub-right-column'>
+                  <textarea name="issuedef" formControlName="issuedef" class="form-control txtarea"
+                            placeholder="Issue Definition..."></textarea>
+                </div>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='column'>
+                <div class='sub-left-column' style="font-family: Calibri;">
+                  Current Status
+                </div>
+              </div>
+              <div class='column'>
+                <div class='sub-right-column'>
+                  <textarea name="status" formControlName="status" class="form-control"
+                            placeholder="Current Status..."></textarea>
+                </div>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='column'>
+                <div class='sub-left-column' style="font-family: Calibri;">
+                  Next Action
+                </div>
+              </div>
+              <div class='column'>
+                <div class='sub-right-column'>
+                  <textarea name="action" formControlName="action" class="form-control"
+                            placeholder="Next Action..."></textarea>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <div class='column'>
+        <div class='right-column'>
+          <app-comms-initial-template
+                              [id]="this.frm.get('id').value"
+                              [issuedef]="this.frm.get('issuedef').value"
+                              [status]="this.frm.get('status').value"
+                              [action]="this.frm.get('action').value"
+                              [type]="this.frm.get('type').value"
+                              [subject]="this.frm.get('subject').value"
+                              [customername]="this.frm.get('customername').value"
+                              >
+          </app-comms-initial-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

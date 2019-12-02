@@ -1,11 +1,38 @@
+import {CommonModule} from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { MatToolbarModule, MatIconModule, MatSidenavModule,
+  MatListModule, MatButtonModule, MatCardModule } from '@angular/material';
 
-const routes: Routes = [];
+import { MatDividerModule } from '@angular/material/divider';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommsInitialTemplateComponent } from './comms-initial-template/comms-initial-template.component';
+import { CommsRootTemplateComponent } from './comms-root-template/comms-root-template.component';
+
+import { SafehtmlPipe } from './Pipes/safehtml.pipe';
+
+import { HomeComponent } from './home/home.component';
+import { CommsInitialComponent } from './comms-initial/comms-initial.component';
+import { CommsRootComponent } from './comms-root/comms-root.component';
+
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'comms-initial', component: CommsInitialComponent },
+  { path: 'comms-root', component: CommsRootComponent },
+
+  { path:  '', component: HomeComponent },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes), FormsModule, ReactiveFormsModule, CommonModule,
+    HttpClientModule, MatToolbarModule, MatIconModule, MatSidenavModule,
+    MatListModule, MatButtonModule, MatCardModule, MatDividerModule],
+  exports: [RouterModule],
+  declarations: [ HomeComponent, CommsInitialTemplateComponent, CommsRootTemplateComponent,
+    SafehtmlPipe, CommsInitialComponent, CommsRootComponent
+  ]
 })
 export class AppRoutingModule { }

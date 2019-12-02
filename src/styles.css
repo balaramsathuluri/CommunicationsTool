@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  padding-top: 2px;
+  padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
