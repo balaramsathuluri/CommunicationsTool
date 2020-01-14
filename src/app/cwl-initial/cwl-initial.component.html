@@ -1,0 +1,201 @@
+<div class="flex-container">
+
+    <!-- Left Column -->
+    <div class="left-column">
+        <form [formGroup]="cwlInitialForm">
+            <div class="form-group">
+                <label>ICM Number</label>
+                <input type="text" class="form-control" placeholder="Enter Incident Number"
+                    formControlName="incidentId" />
+            </div>
+
+            <div class="form-group">
+                <label>Customer Name</label>
+                <input type="text" class="form-control" placeholder="Customer Name" />
+            </div>
+
+            <div class="form-group">
+                <label>Type</label>
+                <select class="form-control" formControlName="incidentType">
+                    <option>Alert</option>
+                    <option>AME Lead Request</option>
+                    <option>Customer Reported Incident</option>
+                    <option>Dual Alert</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Issue Definition</label>
+                <textarea type="text" class="form-control" rows="3" placeholder="Issue Definition"
+                    formControlName="issueDefinition"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Current Status</label>
+                <textarea class="form-control" rows="4" placeholder="Current Status"
+                    formControlName="currentStatus"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Next Action</label>
+                <textarea class="form-control" rows="4" placeholder="Next Action"
+                    formControlName="nextAction"></textarea>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+        <div id="cwlInitContent">
+
+            <table class="MsoNormalTable" style="background: white;" align="center">
+                <tbody>
+                    <tr>
+                        <td width="700.0pt" colspan="3" class="headerColumnStyle">
+                            <p class="MsoNormal">
+                                <span style="font-size: 10.pt; color: black;">
+                                    <img width="175" id="_x0000_i1026" src="../../assets/images/MS-Azure_logo.png"
+                                        alt="Microsoft Azure"></span><span style="font-size:10.0pt">
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="700.0pt" colspan="3" class="firstColumnStyle">
+                            <p class="MsoNormal">
+                                <span class="titleFont">Critical Watch List – Initial Response</span>
+                            </p>
+                            <p class="MsoNormal">
+                                <i>
+                                    <span class="tagLineFont">Customer First. Resiliency focused. Direct Engineering
+                                        Engagement</span>
+                                </i>
+                            </p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td width="700.0pt" colspan="3" class="secondColumnStyle">
+                            <p class="MsoNormal">
+                                <span style="font-size:12.5pt;
+                                    color:black">CWL Service Desk Team received an alert</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="548.0pt" class="incidentIdCellStyle">
+                            <p class="MsoNormal">
+                                <span class="sideHeading">
+                                    INCIDENT ID:
+                                </span>
+                                <span class="incidentIdFont">
+                                    {{this.cwlInitialForm.get('incidentId').value}}
+                                </span>
+                            </p>
+                        </td>
+                        <td width="202.0pt" class="incidentTypeCellStyle">
+                            <p class="MsoNormal">
+                                <span class="sideHeading">
+                                    TYPE:
+                                </span>
+                                <span class="incidentIdFont">
+                                    {{this.cwlInitialForm.get('incidentType').value}}
+                                </span>
+                            </p>
+                        </td>
+                        <td style="width:.3pt;border:none;border-right:solid #A5A5A5 1.0pt;
+                        padding:0in 0in 0in 0in;border-image: initial">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="700.0pt" colspan="3" class="issueDefColumnStyle">
+                            <p class="MsoNormal">
+                                <span class="sideHeading">
+                                    ISSUE DEFINITION:
+                                </span>
+                            </p>
+                            <p class="MsoNormal">
+                                {{this.cwlInitialForm.get('issueDefinition').value}}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="700.0pt" colspan="3" class="currentStatusColumnStyle">
+                            <p class="MsoNormal">
+                                <span class="sideHeading">
+                                    CURRENT STATUS:
+                                </span>
+                            </p>
+                            <p class="MsoNormal">
+                                {{this.cwlInitialForm.get('currentStatus').value}}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="700.0pt" colspan="3" class="nextActionColumnStyle">
+                            <p class="MsoNormal">
+                                <span class="sideHeading">
+                                    NEXT STEPS:
+                                </span>
+                            </p>
+                            <p class="MsoNormal">
+                                {{this.cwlInitialForm.get('nextAction').value}}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="700.0pt" colspan="3" class="secondColumnStyle">
+                            <p class="MsoNormal">
+                                <span style="font-size:10.5pt;
+                                        color:black">If you have any further questions, please reply back to this
+                                    thread.</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="700.0pt" colspan="3" class="footerColumnStyle">
+                            <p class="text-left" style="margin:0in;margin-bottom:.0001pt;line-height:12.0pt">
+                                <span style="color:black">
+                                    <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Femail%2F%3Fdestination%3Dhttps%253A%252F%252Fgo.microsoft.com%252Ffwlink%252F%253FLinkId%253D521839%26p%3DbT0wMWExY2VkNS0yYzM1LTQ1ZTktODA1Zi03ZDU4NjkyZDE4YzUmcz0zZDk2MGNkNC1kNDhkLTRjNmUtOTRiZC1hYmViMjEyYzExZjgmdT1hZW8mbD1wcml2YWN5LXN0YXRlbWVudA%253D%253D&amp;data=02%7C01%7Cv-sapaid%40microsoft.com%7Cbe68d806855c4390f6c708d76ded0a77%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637098737182425527&amp;sdata=RaDd21oVXak1CaErjcM0kclGaYh%2FWWur24c7YRFI%2FtY%3D&amp;reserved=0"
+                                        title="Privacy Statement">
+                                        <span style="font-size:9.0pt;font-family:'Segoe UI',sans-serif;
+                                    color:#6A6A6A">Privacy Statement
+                                        </span>
+                                    </a>
+                                </span>
+                            </p>
+
+                            <p class="text-left" style="margin-top:0in;margin-right:0in;margin-bottom:4.5pt;
+                                margin-left:0in;line-height:12.0pt;overflow-wrap: normal;text-size-adjust: none">
+                                <span style="font-size:9.0pt;font-family:'Segoe UI',sans-serif;color:#6A6A6A">
+                                    Microsoft Corporation,&nbsp;
+                                    <span class="no-wrap">
+                                        One Microsoft Way, ​Redmond, WA 98052
+                                        ​</span>
+                                </span>
+                            </p>
+                            <p class="MsoNormal">
+                                <span style="font-size:9.0pt;font-family:'Segoe UI',sans-serif;
+                                color:#1A1A1A">
+                                    <img border="0" width="116" height="25"
+                                        src="../../assets/images/microsoft-logo-2x.png"
+                                        alt="cid:image001.png@01D5722E.816B69A0" v:shapes="Picture_x0020_6">
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+        <div class="container" style="float: center;">
+            <div style="float: right;padding-right: 90px;padding-bottom: 10px;padding-top: 5px;">
+                <button mat-raised-button style="color:white; background-color:dodgerblue;" (click)="outlookemail()">
+                    <mat-icon> mail_outline</mat-icon> Copy & Email
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

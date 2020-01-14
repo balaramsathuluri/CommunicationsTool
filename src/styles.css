@@ -1,6 +1,11 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 body {
   padding-top: 2px;
   padding-bottom: 20px;
+  display: flex; 
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -10,5 +15,3 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
-

@@ -1,0 +1,135 @@
+.flex-container {
+    display: flex;
+    height: 86vh;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* margin-top: 10px;    */
+}
+
+@media all and (max-width: 1280px) {
+    
+    .flex-container {
+        display: flex;
+        
+        width: 98.5vw;
+        
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 0px;   
+        
+
+    }
+
+    .left-column {
+        width: 40%;
+        
+        
+        margin-left: 20px;
+        padding-top: 0px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .right-column {
+        width: 50%;
+        
+        
+        padding-top: 0px;
+    }
+    
+}
+
+.left-column {
+    width: 42%;
+    /* border: 1px solid red; */
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.right-column {
+    width: 55%;
+    /* border: 1px solid; */
+    padding-top: 20px;
+}
+
+p.MsoNormal, li.MsoNormal, div.MsoNormal {
+    margin: 0in;
+    margin-bottom: .0001pt;
+    font-size: 11.0pt;
+    font-family: "Calibri", sans-serif;
+}
+
+.headerColumnStyle {
+    width: 548.6pt;
+    border: solid #A5A5A5 1.0pt;
+    border-bottom: none;
+    padding: .25in .25in .25in .25in;
+    height: 1.25pt;
+}
+
+.footerColumnStyle {
+    width: 548.6pt;
+    border: solid #A5A5A5 1.0pt;
+    border-top: none;
+    padding: 7.5pt .25in .25in .25in;
+}
+
+.firstColumnStyle, .secondColumnStyle, .issueDefColumnStyle, .currentStatusColumnStyle, .nextActionColumnStyle {
+    width: 548.6pt;
+    border-top: none;
+    border-left: solid #A5A5A5 1.0pt;
+    border-bottom: none;
+    border-right: solid #A5A5A5 1.0pt;
+    padding: .25in .25in .25in .25in;
+    column-span: 3;
+}
+
+.incidentIdCellStyle {
+    width: 300.0pt;
+    border: none;
+    border-left: solid #A5A5A5 1.0pt;
+    padding: 7.5pt .25in 7.5pt .25in;
+    /* background: steelblue; */
+}
+
+.incidentTypeCellStyle {
+    width: 150.1pt;   
+    padding: 0in 0in 0in 0in;
+    /* border-right: solid #A5A5A5 1.0pt;
+    padding: 7.5pt .25in 7.5pt .25in; */
+    
+
+}
+
+.titleFont {
+    font-size: 24.0pt;
+    font-family: "Segoe UI", sans-serif;
+    color: black;
+}
+
+.tagLineFont {
+    font-size: 9.0pt;
+    font-family: "Segoe UI", sans-serif;
+    color: #AFABAB;
+}
+
+.sideHeading {
+    font-size: 9.0pt;
+    font-family: "Segoe UI", sans-serif;
+    color: #767676;
+}
+
+.incidentIdFont{
+    font-size:12.0pt;
+    font-family:"Calibri",sans-serif;
+    color:black;
+    font-weight: bold;
+}
+
+columnStyle{
+    width: 640.0pt;
+    column-span: 3;
+}

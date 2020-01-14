@@ -1,0 +1,160 @@
+.flex-container{
+    display: flex;
+    width: 99vw;
+    height: 90vh;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    
+}
+
+.left-Column{
+    width: 30%;
+    margin-left: 10px;
+    /* background: coral; */
+}
+
+.right-Column{
+    width: 60%;    
+    /* border: 1px solid red;     */
+    margin-left: 30px;
+    
+    
+
+}
+
+@media all and (min-width : 1920px){
+
+    .flex-container{        
+        width: 99vw;
+        /* background: green; */
+        justify-content: initial;
+
+    }
+
+    .left-Column{        
+        margin-left: 100px;     
+        margin-top: 45px;
+        
+    }
+    .right-Column{
+        margin-top: 45px;
+        width: 35%;
+        margin-left: 150px;
+        
+        /* background: orange; */
+        
+    }
+    textarea{
+        height: 200;
+    }
+
+    .copyEmailButtonStyle{
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+    .customerMessageRowStyle{
+        min-height: 150px;
+    }
+
+    .agentResponseRowStyle{
+        min-height: 150px;
+    }
+}
+
+@media all and (max-width : 1280px){
+    textarea{
+        height: 80px;
+    }
+    .flex-container{
+        height: 86vh;
+        width: 98.7vw;
+        
+    }
+
+    .left-Column{
+        width: 35%;        
+        margin-left: 50px;
+        margin-top: 5px;       
+    }
+
+    .right-Column{    
+        width: 50%;
+        margin-top: 5px;
+        margin-left: 100px;
+        /* border: 1px solid; */
+    }
+    .copyEmailButtonStyle{
+        padding-right: 5px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        
+    }
+    .customerMessageRowStyle{
+        min-height: 75px;
+    }
+    .agentResponseRowStyle{
+        min-height: 75px;
+    }
+
+    textarea{
+        height: 90;
+    }
+}
+
+.headerColumn1Style{  
+
+    width:455pt;
+    background:#0078D7; 
+    
+    padding:0in 0in 0in 0in;
+    height:1.75in;
+    
+}
+
+.headerColumn2Style{
+    width:156pt;
+    background:#0078D7;
+    padding:0in 0in 0in 0in; 
+    height:1.75in;
+    border:none; 
+}
+
+p.MsoNormal{
+    margin: 0in;
+    font-size: 11pt;
+    font-family: 'Calibri',sans-serif;
+}
+
+.MsoPlainText{
+    margin: 0in;    
+    font-size: 16px;
+    font-family: "Calibri",sans-serif;
+}
+
+.customerMessageStyle{
+    font-size:12pt;
+    font-family: Gibson;
+    color:#8D8686;
+    background:#F7F7F7;
+    min-height: 100px;    
+}
+
+
+.agentResponseRowStyle{    
+    width: 612px;           
+}
+.agentResponseMessageStyle{    
+    font-size: 12pt;
+    color: black;
+    font-family: "Calibri",sans-serif;
+    min-height: 50;
+}
+
+.footerStyle{        
+    color: #000000; 
+    font-size: 14.66px;
+    font-style: Calibri,sans-serif;
+}
+
+
+

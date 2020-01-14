@@ -1,0 +1,270 @@
+<div class="flex-container">
+    <div class="left-Column">
+        <form [formGroup]="chatInitialForm">
+            <div class="form-group">
+                <label for="transcriptId">Transcript ID</label>
+                <input type="text" class="form-control" formControlName="transcriptId">
+            </div>
+            <div class="form-group">
+                <label for="customerName">Customer Name</label>
+                <input type="text" class="form-control" formControlName="customerName">
+            </div>
+            <div class="form-group">
+                <label for="customerEmail">Customer Email</label>
+                <input type="email" class="form-control" formControlName="customerEmail">
+            </div>
+
+            <div class="form-group">
+                <label for="customerOfflineMessage">Customer Offline Message</label>
+                <textarea class="form-control" formControlName="customerOfflineMessage" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="agentResponse">Agent Response</label>
+                <textarea class="form-control" formControlName="agentResponse" rows="5"></textarea>
+            </div>
+
+        </form>
+
+    </div>
+    <div class="right-Column">
+        <div id="chatOffline">
+            <table style="width: 612px; border: 1px solid;" class="MsoNormalTable" align="center">
+                <tbody>
+                    <!-- Header Row -->
+                    <tr>
+                        <td>
+                            <table style="width: 612px">
+                                <tr>
+                                    <!-- Header Header Column1 -->
+                                    <td class="headerColumn1Style">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="width: 455px; height: 33.33pt;">
+                                                        <p class="MsoNormal">
+                                                            <img width="133" height="60" src="../../assets/images/chat-offline/chat_microsoft_logo.gif" />
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table style="width: 455px;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width: 20px;"></td>
+                                                                    <td style="width: 435px;">
+                                                                        <table style="width: 435px;">
+                                                                            <tbody>
+                                                
+                                                                                <tr>
+                                                                                    <td style="width: 435px;  height: 33.33pt;">
+                                                                                        <p
+                                                                                            style="font-size:28.0pt;line-height:90%;font-family:'Segoe UI',sans-serif; color:white;">
+                                                                                            Azure Portal Chat
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width: 435;">
+                                                                                        <p style=" font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:white;">
+                                                                                            It looks like you left us a message while we
+                                                                                            were unavailable
+                                                
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <!-- Header Header Column2 -->
+                                    <td class="headerColumn2Style">
+                                        <p class="MsoNormal">
+                                            <img width="129" height="172"
+                                                src="../../assets/images/chat-offline/image006.gif" />
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- If you have -->
+                    <tr>
+                        <table style="width: 612px">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px 0in 0in 0in;">
+                                        <p class="MsoNormal"
+                                            style="font-size:10.0pt;font-family:'Segoe UI',sans-serif;color:black; font-weight: bold;">
+                                            If you have feedback on your Azure Portal Chat experience, we would
+                                            appreciate if you could take time to provide it here:
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </tr>
+                    <!-- Leave Feedback -->
+                    <tr style="height: 27.9pt; width: 612px;">
+                        <td style="padding-top: 10px; padding-bottom: 10px;">
+                            <table align="center" >
+                                <tr align="center">
+                                    <td style="width:19pt;background:#0078D7;height: 27.9pt;">
+
+                                    <td style="width:104.35pt;background:#0078D7;">
+
+                                        <p class="MsoNormal" align="center"
+                                            style="text-align:center; font-size:10.0pt;font-family:'Segoe UI',sans-serif; color:#F2F2F2">
+                                            <b>
+
+                                                <a
+                                                    href="https://nam06.safelinks.protection.outlook.com/?url=aka.ms%2Fportalchatsurvey&amp;data=02%7C01%7Cv-madc%40microsoft.com%7C30661c3aa93747fbfd0f08d753e1ddf3%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637070101931409503&amp;sdata=TudfG%2BM2jm%2Fv9lDyGmVe0ILy34ZPbwWOWd1MhuZz8CM%3D&amp;reserved=0"><span
+                                                        style="color:#F2F2F2">Leave Us Feedback!
+                                                    </span>
+                                                </a>
+
+                                            </b>
+                                        </p>
+
+                                    </td>
+                                    <td style="width:20pt;background:#0078D7;"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Customer Name -->
+                    <tr>
+                        <td>
+                            <p class="MsoPlainText">
+                                {{this.chatInitialForm.get('customerName').value}}
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Customer offline Message -->
+                    <tr>
+                        <table style="width: 612px;">
+                            <tbody>
+                                <!-- Dummy Row for spacing -->
+                                <tr>
+                                    <td style="width:3px; background: #0078D7;height: 12px;">
+
+                                    </td>
+                                    <td style="width: 609px">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:3px; background: #0078D7; height: 50px;">
+                                    </td>
+                                    <td style="width: 609px;">
+                                        <div class="customerMessageRowStyle">
+                                            <p class="MsoNormal customerMessageStyle">
+                                                {{this.chatInitialForm.get('customerOfflineMessage').value}}
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Dummy Row for spacing -->
+                                <tr>
+                                    <td style="width:3px; background: #0078D7;height: 12px;">
+
+                                    </td>
+                                    <td style="width: 609px">
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </tr>
+                    <!-- Hello Cusomter -->
+                    <tr>
+                        <table style="width: 612px">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p class="MsoPlainText">
+                                            {{this.chatInitialForm.get('customerName').value}}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </tr>
+
+                    <!-- Agent Response -->
+                    <tr>
+                        <table style="width: 612px;" id="agentResTable">
+                            <tbody>
+                                <!-- Dummy Row for spacing -->
+                                <tr>
+                                    <td style="height: 10px;">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="agentResponseRowStyle">
+                                            <p class="agentResponseMessageStyle">
+                                                {{this.chatInitialForm.get('agentResponse').value}}
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Dummy Row for spacing -->
+                                <tr>
+                                    <td style="height: 10px;">
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </tr>
+
+                    <!-- Team Details -->
+                    <tr>
+                        <td>
+                            <table style="width: 612px;">
+                                <tbody>
+                                    <!-- Dummy Row for spacing -->
+                                    <tr>
+                                        <td style="height: 15px;">
+                                
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 40px;">
+                                            <p class="MsoNormal footerStyle">
+                                                Best Regards,
+                                                <br />
+                                                Azure Portal Team Chat
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+        <div>
+            <div class="copyEmailButtonStyle float-right">
+                <button mat-raised-button style="color:white; background-color:dodgerblue;" (click)="outlookemail()">
+                    <mat-icon> mail_outline</mat-icon> Copy & Email
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

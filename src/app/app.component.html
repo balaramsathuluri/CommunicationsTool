@@ -1,133 +1,132 @@
-
- <mat-menu #rootMenu="matMenu" xPosition="after">
-      <button mat-menu-item [matMenuTriggerFor] = "subMenuAME">
-             AME
-        </button>
-         <button mat-menu-item [matMenuTriggerFor] = "subMenuChatSupport">
-             Chat Support
-        </button>
-           <button mat-menu-item [matMenuTriggerFor] = "subMenuCWL">
-             Critical Watch List
-        </button>
-</mat-menu>
-
-
-<mat-menu #rootMenuSide="matMenu" xPosition="after">
-      <button mat-menu-item [matMenuTriggerFor] = "subMenuAMESide">
-             AME
-        </button>
-      <button mat-menu-item [matMenuTriggerFor] = "subMenuChatSupportSide">
-             Chat Support
-        </button>
-      <button mat-menu-item [matMenuTriggerFor] = "subMenuCWLSide">
-            Critical Watch List
-        </button>
-</mat-menu>
-
-<!-- Team 1 AME Menu Items -->
-
- <mat-menu #subMenuAME="matMenu" xPosition="after">
-     <button mat-menu-item [routerLink]="'/comms-initial'">
-        <mat-icon style="color:dodgerblue;"> email</mat-icon>
-           Initial Template
-        </button>
-      <button mat-menu-item [routerLink]="'/comms-root'">
-         <mat-icon style="color:dodgerblue;"> email</mat-icon>
-          Root Cause Template
-        </button>
-</mat-menu>
-
- <mat-menu #subMenuAMESide="matMenu" xPosition="after">
-     <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/comms-initial'">
-        <mat-icon style="color:dodgerblue"> email </mat-icon>
-         Initial Template
-       </button>
-        <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/comms-root'">
-        <mat-icon style="color:dodgerblue"> email</mat-icon>
-         Root Cause Template
-       </button>
-</mat-menu>
-
-<!-- Team 1 AME Menu Items -->
-
-<!-- Team 2 Chat Support Menu Items -->
-
- <mat-menu #subMenuChatSupport="matMenu" xPosition="after">
-     <button mat-menu-item [routerLink]="'/chatsupporttemplate'">
-        <mat-icon style="color:dodgerblue;"> email</mat-icon>
-           Template
-        </button>
-</mat-menu>
-
- <mat-menu #subMenuChatSupportSide="matMenu" xPosition="after">
-     <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/chatsupporttemplate'">
-        <mat-icon style="color:dodgerblue"> email </mat-icon>
-          Chat Support Template
-       </button>
-</mat-menu>
-
-<!-- Team 2 Chat Support Menu Items -->
+<div>
+  <mat-menu #rootMenu="matMenu" xPosition="after">
+    <button mat-menu-item [matMenuTriggerFor]="subMenuAME">
+      AME
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenuChatSupport">
+      Chat Support
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenuCWL">
+      Critical Watch List
+    </button>
+  </mat-menu>
 
 
+  <mat-menu #rootMenuSide="matMenu" xPosition="after">
+    <button mat-menu-item [matMenuTriggerFor]="subMenuAMESide">
+      AME
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenuChatSupportSide">
+      Chat Support
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenuCWLSide">
+      Critical Watch List
+    </button>
+  </mat-menu>
 
-<!-- Team 3 CWL Menu Items -->
+  <!-- Team 1 AME Menu Items -->
 
- <mat-menu #subMenuCWL="matMenu" xPosition="after">
-     <button mat-menu-item [routerLink]="'/cwltemplate'">
-        <mat-icon style="color:dodgerblue;"> email</mat-icon>
-           CWL Template
-        </button>
-</mat-menu>
+  <mat-menu #subMenuAME="matMenu" xPosition="after">
+    <button mat-menu-item [routerLink]="'/comms-initial'">
+      <mat-icon style="color:dodgerblue;"> email</mat-icon>
+      Initial Template
+    </button>
+    <button mat-menu-item [routerLink]="'/comms-root'">
+      <mat-icon style="color:dodgerblue;"> email</mat-icon>
+      Root Cause Template
+    </button>
+  </mat-menu>
 
- <mat-menu #subMenuCWLSide="matMenu" xPosition="after">
-     <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/cwltemplate'">
-        <mat-icon style="color:dodgerblue"> email </mat-icon>
-          CWL Template
-       </button>
-</mat-menu>
+  <mat-menu #subMenuAMESide="matMenu" xPosition="after">
+    <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/comms-initial'">
+      <mat-icon style="color:dodgerblue"> email </mat-icon>
+      Initial Template
+    </button>
+    <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/comms-root'">
+      <mat-icon style="color:dodgerblue"> email</mat-icon>
+      Root Cause Template
+    </button>
+  </mat-menu>
 
-<!-- Team 3 CWL Menu Items -->
+  <!-- Team 1 AME Menu Items -->
 
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar class="navbar" style="float:top">
-  <mat-toolbar-row>
-    <button mat-button (click)="sidenav.toggle()"
-    style="font-size:20px;" width="150px">
-      <mat-icon> menu</mat-icon>
-       </button><span>Communication Tool Kit </span>
+  <!-- Team 2 Chat Support Menu Items -->
+
+  <mat-menu #subMenuChatSupport="matMenu" xPosition="after">
+    <button mat-menu-item [routerLink]="'/chat-offline'">
+      <mat-icon style="color:dodgerblue;"> email</mat-icon>
+      Chat Offline
+    </button>
+  </mat-menu>
+
+  <mat-menu #subMenuChatSupportSide="matMenu" xPosition="after">
+    <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/chat-offline'">
+      <mat-icon style="color:dodgerblue"> email </mat-icon>
+      Chat Offline
+    </button>
+  </mat-menu>
+
+  <!-- Team 2 Chat Support Menu Items -->
+
+
+
+  <!-- Team 3 CWL Menu Items -->
+
+  <mat-menu #subMenuCWL="matMenu" xPosition="after">
+    <button mat-menu-item [routerLink]="'/cwl-initial'">
+      <mat-icon style="color:dodgerblue;"> email</mat-icon>
+      Initial Comms
+    </button>
+  </mat-menu>
+
+  <mat-menu #subMenuCWLSide="matMenu" xPosition="after">
+    <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/cwl-initial'">
+      <mat-icon style="color:dodgerblue"> email </mat-icon>
+      CWL Template
+    </button>
+  </mat-menu>
+
+  <!-- Team 3 CWL Menu Items -->
+
+  <!--The content below is only a placeholder and can be replaced.-->
+  <mat-toolbar class="navbar" style="float:top">
+    <mat-toolbar-row>
+      <button mat-button (click)="sidenav.toggle()" style="font-size:20px;" width="150px">
+        <mat-icon> menu</mat-icon>
+      </button><span>CXP Communications Tool</span>
 
       <button mat-button [routerLink]="'/'">
-         <mat-icon> home</mat-icon>
+        <mat-icon> home</mat-icon>
         Home
-       </button>
-        <button mat-button [matMenuTriggerFor] = "rootMenu">
-            <mat-icon> list</mat-icon>
-             Template
-        </button>
+      </button>
+      <button mat-button [matMenuTriggerFor]="rootMenu">
+        <mat-icon> list</mat-icon>
+        Template
+      </button>
 
-  </mat-toolbar-row>
-</mat-toolbar>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-<mat-sidenav-container>
-  <mat-sidenav #sidenav>
-    <mat-nav-list>
-      <a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/'">
-        <mat-icon style="color:dodgerblue"> home</mat-icon>
-       </a>
-      <a mat-list-item [matMenuTriggerFor] = "rootMenuSide">
-        <mat-icon style="color:dodgerblue"> list</mat-icon>
-       </a>
+  <mat-sidenav-container class="flex-container">
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/'">
+          <mat-icon style="color:dodgerblue"> home</mat-icon>
+        </a>
+        <a mat-list-item [matMenuTriggerFor]="rootMenuSide">
+          <mat-icon style="color:dodgerblue"> list</mat-icon>
+        </a>
 
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div style="height: 70vh;" class="row well">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="rootSize">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 
-<!--
+  <!--
   <mat-toolbar style="background: silver; color:dodgerblue">
     <mat-toolbar-row>
        <mat-icon> copyright</mat-icon>
@@ -140,3 +139,4 @@
      </mat-toolbar-row>
    </mat-toolbar>
  -->
+</div>

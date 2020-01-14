@@ -103,7 +103,7 @@ input,
 select {
   max-width: 280px;
   min-width: 280px;
-  height: 25px;
+  height: 35px;
   background-color: aliceblue;
   font-family: Calibri;
   font-weight: bold;

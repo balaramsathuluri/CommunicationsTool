@@ -9,22 +9,24 @@
             </div>
           </div>
           <div class='row'>
-            <div class='column'>
-              <div class='sub-left-column' style="font-family: Calibri;">
-                ICM Number
+            <div class="row">
+              <div class='column'>
+                <div class='sub-left-column' style="font-family: Calibri;">
+                  ICM Number
+                </div>
               </div>
-            </div>
-            <div class='column'>
-              <div class='sub-right-column'>
-                <input type="text" (focusout)="GetIncedentData($event)" (keypress)="onlyNumber($event)" name="id"
-                  formControlName="id" class="form-control" placeholder="ICM Number...">
-                <span class="help-block" *ngIf="((rcaForm.get('id').touched ||
+              <div class='column'>
+                <div class='sub-right-column'>
+                  <input type="text" (focusout)="GetIncedentData($event)" (keypress)="onlyNumber($event)" name="id"
+                    formControlName="id" class="form-control" placeholder="ICM Number...">
+                  <span class="help-block" *ngIf="((rcaForm.get('id').touched ||
                                           rcaForm.get('id').dirty) &&
                                           rcaForm.get('id').errors)">
-                  <small class="help-block" class="text-danger" *ngIf="rcaForm.get('id').errors.required">
-                    * ICM Number is required.
-                  </small>
-                </span>
+                    <small class="help-block" class="text-danger" *ngIf="rcaForm.get('id').errors.required">
+                      * ICM Number is required.
+                    </small>
+                  </span>
+                </div>
               </div>
             </div>
             <div class='row'>
@@ -133,13 +135,10 @@
             [type]="this.frm.get('type').value" [subject]="this.frm.get('subject').value"
             [customername]="this.frm.get('customername').value">
           </app-comms-root-template> -->
-          <app-comms-root-template [id]="this.rcaForm.get('id').value"
-                                   [issuedef]="this.rcaForm.get('issuedef').value"
-                                   [status]="this.rcaForm.get('status').value"
-                                   [cause]="this.rcaForm.get('cause').value"
-                                   [nextAction]="this.rcaForm.get('nextAction').value"
-                                   [alertType]="this.rcaForm.get('alertType').value"
-                                  >
+          <app-comms-root-template [id]="this.rcaForm.get('id').value" [issuedef]="this.rcaForm.get('issuedef').value"
+            [status]="this.rcaForm.get('status').value" [cause]="this.rcaForm.get('cause').value"
+            [nextAction]="this.rcaForm.get('nextAction').value" [alertType]="this.rcaForm.get('alertType').value"
+            [subject]="this.rcaForm.get('subject').value">
 
           </app-comms-root-template>
         </div>

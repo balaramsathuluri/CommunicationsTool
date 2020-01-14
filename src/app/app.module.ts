@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BlobModule } from 'angular-azure-blob-service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {
   MatButtonModule,
@@ -23,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChatOfflineComponent } from './chat-offline/chat-offline.component';
+
 
 const material = [
   MatButtonModule,
@@ -35,12 +38,16 @@ const material = [
   MatSidenavModule,
   MatListModule, MatCardModule,
 
-  MatMenuModule
+  MatMenuModule,
+
+  FormsModule,
+  ReactiveFormsModule
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChatOfflineComponent
   ],
   imports: [
     BlobModule.forRoot(),
