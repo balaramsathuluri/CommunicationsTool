@@ -2,25 +2,25 @@
     <div class="left-Column">
         <form [formGroup]="chatInitialForm">
             <div class="form-group">
-                <label for="transcriptId">Transcript ID</label>
-                <input type="text" class="form-control" formControlName="transcriptId">
+                <!-- <label for="transcriptId">Transcript ID</label> -->
+                <input type="text" class="form-control" formControlName="transcriptId" placeholder="Transcript ID">
             </div>
             <div class="form-group">
-                <label for="customerName">Customer Name</label>
-                <input type="text" class="form-control" formControlName="customerName">
+                <!-- <label for="customerName">Customer Name</label> -->
+                <input type="text" class="form-control" formControlName="customerName" placeholder="Customer Name">
             </div>
             <div class="form-group">
-                <label for="customerEmail">Customer Email</label>
-                <input type="email" class="form-control" formControlName="customerEmail">
+                <!-- <label for="customerEmail">Customer Email</label> -->
+                <input type="email" class="form-control" formControlName="customerEmail" placeholder="Customer Email"> 
             </div>
 
             <div class="form-group">
-                <label for="customerOfflineMessage">Customer Offline Message</label>
-                <textarea class="form-control" formControlName="customerOfflineMessage" rows="3"></textarea>
+                <!-- <label for="customerOfflineMessage">Customer Offline Message</label> -->
+                <textarea class="form-control" formControlName="customerOfflineMessage" rows="3" placeholder="Customer Offline Message"></textarea>
             </div>
             <div class="form-group">
-                <label for="agentResponse">Agent Response</label>
-                <textarea class="form-control" formControlName="agentResponse" rows="5"></textarea>
+                <!-- <label for="agentResponse">Agent Response</label> -->
+                <textarea class="form-control" formControlName="agentResponse" rows="5" placeholder="Agent Response"></textarea>
             </div>
 
         </form>
@@ -113,6 +113,7 @@
                             </tbody>
                         </table>
                     </tr>
+
                     <!-- Leave Feedback -->
                     <tr style="height: 27.9pt; width: 612px;">
                         <td style="padding-top: 10px; padding-bottom: 10px;">
@@ -151,6 +152,7 @@
                         </td>
                     </tr>
                     <!-- Customer offline Message -->
+                    
                     <tr>
                         <table style="width: 612px;">
                             <tbody>

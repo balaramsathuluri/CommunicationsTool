@@ -1,70 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Page Partition Left and right and sub levels start */
-
-.some-page-wrapper {
-  margin: 10px;
-  /* background-color: red; */
-}
-
-.row {
+.flex-container{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* background-color: silver; */
-  width: 100%;
+  height: auto;
+  width: 100vw;      
+  flex-direction: row;  
+  /* background: #edeff3;   */
+  /* background: red; */
+  background-color: #fff;
+
 }
 
-.column {
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
+.left-column{
+  width: 42vw;
+  /* border: 1px dashed dodgerblue; */
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.left-column {
-  /* background-color: dodgerblue; */
-  height: 800px;
-  width: 100%;
+.right-column{
+  width: 55vw;
+  /* border: 1px dashed limegreen;   */
 }
 
-.right-column {
-  
-  height: 800px;
-  width: 100%;
+
+@media all and (max-width: 1280px) {
+
+  .flex-container{    
+    width: 100vw;   
+    /* border: 2px solid red;    */
+  }  
+  .left-column{
+    width: 40vw;
+  }
+  .right-column{
+    width: 58vw;
+    /* border: 1px dashed limegreen;   */
+  }
+  textarea{
+    height: 120;
+  }
 }
 
-.sub-left-column {
-  /* background-color: green; */
-  padding-left: 250px;
-  margin: 10px;
-  width: 50%;
-  color: dodgerblue;
-  font-weight: bold;
-}
+@media all and (min-width: 1920px) {
 
-.sub-right-column {
-  /* background-color: orange; */
-  padding-left: 0px;
-  margin: 10px;
-  width: 100%;
-  color: dodgerblue;
-  font-weight: bold;
-}
+  .flex-container{    
+    width: 90vw;
+    margin-top: 25px;   
+    /* border: 2px solid red;    */
+  }  
+  .left-column{
+    width: 40vw;
+    /* border: 2px solid dodgerblue;    */
 
-.sub-full-column {
-  /* background-color: wheat; */
-  height: 50px;
-  width: 100%;
-}
-
-@media screen and (min-width: 800px) {
-  .column {
-    flex: 2
+  }
+  .right-column{
+    width: 55vw;
+    /* border: 1px dashed limegreen;   */
   }
 
-  .double-column {
-    flex: 2
+  textarea{
+    height: 170;
   }
 }
 
@@ -77,9 +72,7 @@
     font-size: 15px;
     margin-bottom:0.1rem;
 }
-.form-group {
-    margin-bottom: 0.1rem;
-}
+
 .btncustom{
     padding-left: 50%;
 
@@ -87,37 +80,11 @@
 .spnfooter{
     font-size: 9px;
 }
-.form-control{
-    font-size: 15px;
-    width: 500px;
-    font-weight: bold;
-    font-family: Calibri;
-}
-
-textarea{
-    height: 150px;
-    min-height: 150px;
-    max-height: 150px;
-    max-width: 280px;
-    min-width: 280px;
-    background-color: aliceblue;
-    font-family: Calibri;
-    font-weight: bold;
-    overflow: auto;
-
-}
 
 
-input,
-select {
-  max-width: 280px;
-  min-width: 280px;
-  height: 35px;
-  background-color: aliceblue;
-  font-family: Calibri;
-  font-weight: bold;
 
-}
+
+
 
 .text-danger{
   color:red;

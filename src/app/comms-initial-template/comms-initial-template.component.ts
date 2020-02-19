@@ -12,6 +12,7 @@ import { BlobService, UploadConfig, UploadParams } from 'angular-azure-blob-serv
 export class CommsInitialTemplateComponent implements OnInit {
   to = '';
   cc = '';
+  body = '';
   mailText = '';
   loc = '';
   microsoftLogoUrl = '../assets/images/MicrosoftLogo.png';
@@ -46,6 +47,9 @@ export class CommsInitialTemplateComponent implements OnInit {
 
   constructor(private http: HttpClient, private apiService: ApiService) {
     this.GetCustomerList();
+    this.cc = "ameopss@microsoft.com;sarn@microsoft.com;AMEOps@microsoft.com;";
+    this.body ="abc@gmail.com";
+
    }
 
   @Input() id: string;
@@ -60,25 +64,28 @@ export class CommsInitialTemplateComponent implements OnInit {
   }
 
 
-    outlookemail() {
-      const tempCustomerName = this.customername.toUpperCase();
+  outlookemail() {
+    const tempCustomerName = this.customername.toUpperCase();
 
-      if (tempCustomerName.indexOf('ADMS') > -1) {
-        console.log('ADMS found inside tempCustomerName');
-        this.to = ';';
-        // this.to = 'Gary.DiPalma@microsoft.com;Ryan.nauman@microsoft.com';
-           } else {
-            console.log('ADMS Not found inside tempCustomerName');
-            this.to = ';';
-            // this.to = 'joseph.a.calabrese@kodakalaris.com;Anil.Kurji@Kodakalaris.Com;steven.braunschweiger@kodakalaris.com';
-           }
+    // if (tempCustomerName.indexOf('ADMS') > -1) {
+    //   console.log('ADMS found inside tempCustomerName');
+    //   this.to = ';';
+    //   // this.to = 'Gary.DiPalma@microsoft.com;Ryan.nauman@microsoft.com';
+    // } else {
+    //   console.log('ADMS Not found inside tempCustomerName');
+    //   this.to = ';';
+    //   // this.to = 'joseph.a.calabrese@kodakalaris.com;Anil.Kurji@Kodakalaris.Com;steven.braunschweiger@kodakalaris.com';
+    // }
 
-      this.selectElementContents(document.getElementById('htmlbody'));
-
-      this.mailText = 'mailto:' + this.to + '?subject=' + this.subject;
-
-      // alert(this.mailText);
-      window.location.href = this.mailText;
+    this.selectElementContents(document.getElementById('htmlbody'));
+    this.body = document.getElementById('htmlbody').innerHTML;
+    
+    // this.mailText = "mailto:" + this.to + "?cc=" + this.cc+ "&subject=" + this.subject + "&from=" + this.from ;
+    window.open( "mailto:" + this.to + "?cc=" + this.cc + "&subject=" + this.subject);
+    
+    // window.open('mailto:someone@somewhere.com? &cc='+ this.cc,'Initial Communication');
+    // alert(this.mailText);
+    // window.location = this.mailText;
   }
 
 

@@ -1,148 +1,73 @@
-<form [formGroup]="rcaForm" class="md-form form-sm">
-  <div class='some-page-wrapper'>
-    <div class='row'>
-      <div class='column'>
-        <div class='left-column'>
-          <div class="row">
-            <div class="column">
-              <div class='sub-full-column'></div>
-            </div>
-          </div>
-          <div class='row'>
-            <div class="row">
-              <div class='column'>
-                <div class='sub-left-column' style="font-family: Calibri;">
-                  ICM Number
-                </div>
-              </div>
-              <div class='column'>
-                <div class='sub-right-column'>
-                  <input type="text" (focusout)="GetIncedentData($event)" (keypress)="onlyNumber($event)" name="id"
-                    formControlName="id" class="form-control" placeholder="ICM Number...">
-                  <span class="help-block" *ngIf="((rcaForm.get('id').touched ||
-                                          rcaForm.get('id').dirty) &&
-                                          rcaForm.get('id').errors)">
-                    <small class="help-block" class="text-danger" *ngIf="rcaForm.get('id').errors.required">
-                      * ICM Number is required.
-                    </small>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class='row'>
-              <div class='column'>
-                <div class='sub-left-column' style="font-family: Calibri;">
-                  Customer Name
-                </div>
-              </div>
+<div class='flex-container'>
 
-              <div class='column'>
-                <div class='sub-right-column'>
-                  <input type="text" name="customername" formControlName="customername" class="form-control"
-                    placeholder="Customer Name..." readonly=true>
-                </div>
-              </div>
-            </div>
-            <div class='row'>
-              <div class='column'>
-                <div class='sub-left-column' style="font-family: Calibri;">
-                  Type
-                </div>
-              </div>
-              <div class='column'>
-                <div class='sub-right-column'>
-                  <select name="type" formControlName="alertType" class="form-control" placeholder="TYPE">
-                    <option *ngFor="let types of alerttypes">
-                      {{types}}
-                    </option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class='row form-group'>
-              <div class='column'>
-                <div class='sub-left-column' style="font-family: Calibri;">
-                  Subject
-                </div>
-              </div>
-              <div class='column'>
-                <div class='sub-right-column'>
-                  <input type="text" name="subject" formControlName="subject" class="form-control"
-                    placeholder="Subject...">
-                </div>
-              </div>
-            </div>
-            <div class='row'>
-              <div class='column'>
-                <div class='sub-left-column' style="font-family: Calibri;">
-                  Issue Definition
-                </div>
-              </div>
-              <div class='column'>
-                <div class='sub-right-column'>
-                  <textarea name="issuedef" formControlName="issuedef" class="form-control txtarea"
-                    placeholder="Issue Definition..."></textarea>
-                </div>
-              </div>
-            </div>
-            <div class='row'>
-              <div class='column'>
-                <div class='sub-left-column' style="font-family: Calibri;">
-                  Current Status
-                </div>
-              </div>
-              <div class="column">
-                <div class='sub-right-column'>
-                  <textarea name="status" formControlName="status" class="form-control"
-                    placeholder="Current Status..."></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="column">
-                <div class="sub-left-column" style="font-family: Calibri;">
-                  Root Cause
-                </div>
-              </div>
-              <div class="column">
-                <div class="sub-right-column">
-                  <textarea name="cause" formControlName="cause" class="form-control"
-                    placeholder="Root Cause..."></textarea>
-                </div>
-              </div>
-            </div>
-            <div class='row'>
-              <div class='column'>
-                <div class='sub-left-column' style="font-family: Calibri;">
-                  Next Action
-                </div>
-              </div>
-              <div class='column'>
-                <div class='sub-right-column'>
-                  <textarea name="nextSteps" formControlName="nextAction" class="form-control"
-                    placeholder="Next Action..."></textarea>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
+  <div class='left-column'>
+  
+    <form [formGroup]="rcaForm" class="md-form form-sm">
+  
+      <div class="form-group">
+        <!-- <label>ICM Number</label> -->
+  
+        <input type="text" (focusout)="GetIncedentData($event)" (keypress)="onlyNumber($event)" name="id"
+          formControlName="id" class="form-control" placeholder="ICM Number...">
+        <span class="help-block"
+          *ngIf="((rcaForm.get('id').touched || rcaForm.get('id').dirty) && rcaForm.get('id').errors)">
+          <small class="help-block" class="text-danger" *ngIf="rcaForm.get('id').errors.required">
+            * ICM Number is required.
+          </small>
+        </span>
+  
       </div>
-      <div class='column'>
-        <div class='right-column'>
-          <!-- <app-comms-root-template [id]="this.frm.get('id').value" [issuedef]="this.frm.get('issuedef').value"
-            [status]="this.frm.get('status').value" [action]="this.frm.get('action').value"
-            [type]="this.frm.get('type').value" [subject]="this.frm.get('subject').value"
-            [customername]="this.frm.get('customername').value">
-          </app-comms-root-template> -->
-          <app-comms-root-template [id]="this.rcaForm.get('id').value" [issuedef]="this.rcaForm.get('issuedef').value"
-            [status]="this.rcaForm.get('status').value" [cause]="this.rcaForm.get('cause').value"
-            [nextAction]="this.rcaForm.get('nextAction').value" [alertType]="this.rcaForm.get('alertType').value"
-            [subject]="this.rcaForm.get('subject').value">
-
-          </app-comms-root-template>
-        </div>
+  
+      <div class='form-group'>
+  
+        <input type="text" name="customername" formControlName="customername" class="form-control"
+          placeholder="Customer Name..." readonly=true>
       </div>
-    </div>
+  
+      <div class='form-group'>
+        <select name="type" formControlName="alertType" class="form-control" placeholder="TYPE">
+          <option *ngFor="let types of alerttypes">
+            {{types}}
+          </option>
+        </select>
+  
+      </div>
+  
+      <div class='form-group'>
+        <input type="text" name="subject" formControlName="subject" class="form-control" placeholder="Subject...">
+      </div>
+  
+      <div class='form-group'>
+        <textarea name="issuedef" formControlName="issuedef" class="form-control txtarea"
+          placeholder="Issue Definition..."></textarea>
+      </div>
+  
+      <div class='form-group'>
+        <textarea name="status" formControlName="status" class="form-control" placeholder="Current Status..."></textarea>
+  
+      </div>
+  
+      <div class="form-group">
+        <textarea name="cause" formControlName="cause" class="form-control" placeholder="Root Cause..."></textarea>
+  
+      </div>
+  
+      <div class='form-group'>
+        <textarea name="nextSteps" formControlName="nextAction" class="form-control"
+          placeholder="Next Action..."></textarea>
+  
+      </div>
+  
+    </form>
   </div>
-</form>
+
+  <div class='right-column'>
+    <app-comms-root-template [id]="this.rcaForm.get('id').value" [issuedef]="this.rcaForm.get('issuedef').value"
+      [status]="this.rcaForm.get('status').value" [cause]="this.rcaForm.get('cause').value"
+      [nextAction]="this.rcaForm.get('nextAction').value" [alertType]="this.rcaForm.get('alertType').value"
+      [subject]="this.rcaForm.get('subject').value">
+
+    </app-comms-root-template>
+  </div>
+
+</div>

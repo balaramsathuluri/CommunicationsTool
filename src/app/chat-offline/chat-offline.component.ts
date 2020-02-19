@@ -11,10 +11,10 @@ export class ChatOfflineComponent implements OnInit {
 
   chatInitialForm= new FormGroup({
     transcriptId:  new FormControl(''),
-    customerName: new FormControl('Hello Customer'),
+    customerName: new FormControl(''),
     customerEmail: new FormControl(''),
-    customerOfflineMessage: new FormControl('Your offline message'),
-    agentResponse: new FormControl('Agent Response')
+    customerOfflineMessage: new FormControl(''),
+    agentResponse: new FormControl('')
   });
 
   constructor() { }

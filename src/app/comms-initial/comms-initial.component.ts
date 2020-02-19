@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { ApiService } from '../Services/api.service';
+import { Incident } from '../Services/incident';
 
 @Component({
   selector: 'app-comms-initial',
@@ -8,20 +10,26 @@ import { ApiService } from '../Services/api.service';
   styleUrls: ['./comms-initial.component.css']
 })
 export class CommsInitialComponent implements OnInit {
-  frm: FormGroup;
+  ameInitialCommsForm: FormGroup;
   alerttypes = ['Alert', 'AME Lead Request', 'Customer Reported Incident', 'Dual Alert'];
   jsondata: any;
+  errorMessage: any;
 
   constructor(private fb: FormBuilder, private apiService: ApiService) {
-
   }
 
   ngOnInit() {
-    this.frm = this.fb.group({
-      id: ['', Validators.required], issuedef: [''], subject: [''],
-      status: [''], action: [''], type: ['Alert'], customername: ['']
+    this.ameInitialCommsForm = this.fb.group({
+      id: ['', Validators.required],
+      issuedef: [''],
+      subject: [''],
+      status: [''],
+      action: [''],
+      type: ['Alert'],
+      customername: ['']
     });
   }
+
   onlyNumber(evt) {
     evt = (evt) ? evt : window.event;
     const charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -31,17 +39,16 @@ export class CommsInitialComponent implements OnInit {
     return true;
   }
 
-  GetIncedentData(event) {     
-      const tempIncidentId = this.frm.get('id').value;
+  GetIncedentData(event) {
+    const incidentId = this.ameInitialCommsForm.get('id').value; 
 
-      // getData
-      this.apiService.getincidentdata(tempIncidentId).subscribe(x => {
-        this.jsondata = x ;
-        this.frm.get('issuedef').patchValue(this.jsondata.Title);
-        this.frm.get('status').patchValue(this.jsondata.CorrelatinId);
-        // this.frm.get('action').patchValue(this.jsondata.RoutingId);
-        this.frm.get('customername').patchValue(this.jsondata.CustomerName);
-       });
-
+    this.apiService.getincidentdata(incidentId).subscribe({
+      next: incidentJson => {        
+        this.ameInitialCommsForm.get('issuedef').patchValue(incidentJson.Title)
+        this.ameInitialCommsForm.get('status').patchValue(incidentJson.CorrelationId)
+        this.ameInitialCommsForm.get('customername').patchValue(incidentJson.CustomerName)
+      },
+      error:err => { this.errorMessage = err }
+    });    
   }
 }

@@ -3,19 +3,17 @@
     <!-- Left Column -->
     <div class="left-column">
         <form [formGroup]="cwlInitialForm">
-            <div class="form-group">
-                <label>ICM Number</label>
+            <div class="form-group">               
                 <input type="text" class="form-control" placeholder="Enter Incident Number"
-                    formControlName="incidentId" />
+                    formControlName="incidentId" (focusout)="GetIncedentData()"/>
             </div>
 
             <div class="form-group">
-                <label>Customer Name</label>
-                <input type="text" class="form-control" placeholder="Customer Name" />
+                <input type="text" class="form-control" placeholder="Customer Name" 
+                    formControlName="customerName" />
             </div>
 
             <div class="form-group">
-                <label>Type</label>
                 <select class="form-control" formControlName="incidentType">
                     <option>Alert</option>
                     <option>AME Lead Request</option>
@@ -25,17 +23,14 @@
             </div>
 
             <div class="form-group">
-                <label>Issue Definition</label>
                 <textarea type="text" class="form-control" rows="3" placeholder="Issue Definition"
                     formControlName="issueDefinition"></textarea>
             </div>
             <div class="form-group">
-                <label>Current Status</label>
                 <textarea class="form-control" rows="4" placeholder="Current Status"
                     formControlName="currentStatus"></textarea>
             </div>
             <div class="form-group">
-                <label>Next Action</label>
                 <textarea class="form-control" rows="4" placeholder="Next Action"
                     formControlName="nextAction"></textarea>
             </div>
@@ -46,7 +41,6 @@
     <!-- Right Column -->
     <div class="right-column">
         <div id="cwlInitContent">
-
             <table class="MsoNormalTable" style="background: white;" align="center">
                 <tbody>
                     <tr>
@@ -59,6 +53,7 @@
                             </p>
                         </td>
                     </tr>
+
                     <tr>
                         <td width="700.0pt" colspan="3" class="firstColumnStyle">
                             <p class="MsoNormal">
@@ -73,6 +68,7 @@
                         </td>
 
                     </tr>
+                    
                     <tr>
                         <td width="700.0pt" colspan="3" class="secondColumnStyle">
                             <p class="MsoNormal">
@@ -186,9 +182,6 @@
                     </tr>
                 </tbody>
             </table>
-
-
-
         </div>
         <div class="container" style="float: center;">
             <div style="float: right;padding-right: 90px;padding-bottom: 10px;padding-top: 5px;">

@@ -1,142 +1,53 @@
-<div>
-  <mat-menu #rootMenu="matMenu" xPosition="after">
-    <button mat-menu-item [matMenuTriggerFor]="subMenuAME">
-      AME
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="subMenuChatSupport">
-      Chat Support
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="subMenuCWL">
-      Critical Watch List
-    </button>
-  </mat-menu>
-
-
-  <mat-menu #rootMenuSide="matMenu" xPosition="after">
-    <button mat-menu-item [matMenuTriggerFor]="subMenuAMESide">
-      AME
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="subMenuChatSupportSide">
-      Chat Support
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="subMenuCWLSide">
-      Critical Watch List
-    </button>
-  </mat-menu>
-
-  <!-- Team 1 AME Menu Items -->
-
-  <mat-menu #subMenuAME="matMenu" xPosition="after">
-    <button mat-menu-item [routerLink]="'/comms-initial'">
-      <mat-icon style="color:dodgerblue;"> email</mat-icon>
-      Initial Template
-    </button>
-    <button mat-menu-item [routerLink]="'/comms-root'">
-      <mat-icon style="color:dodgerblue;"> email</mat-icon>
-      Root Cause Template
-    </button>
-  </mat-menu>
-
-  <mat-menu #subMenuAMESide="matMenu" xPosition="after">
-    <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/comms-initial'">
-      <mat-icon style="color:dodgerblue"> email </mat-icon>
-      Initial Template
-    </button>
-    <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/comms-root'">
-      <mat-icon style="color:dodgerblue"> email</mat-icon>
-      Root Cause Template
-    </button>
-  </mat-menu>
-
-  <!-- Team 1 AME Menu Items -->
-
-  <!-- Team 2 Chat Support Menu Items -->
-
-  <mat-menu #subMenuChatSupport="matMenu" xPosition="after">
-    <button mat-menu-item [routerLink]="'/chat-offline'">
-      <mat-icon style="color:dodgerblue;"> email</mat-icon>
-      Chat Offline
-    </button>
-  </mat-menu>
-
-  <mat-menu #subMenuChatSupportSide="matMenu" xPosition="after">
-    <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/chat-offline'">
-      <mat-icon style="color:dodgerblue"> email </mat-icon>
-      Chat Offline
-    </button>
-  </mat-menu>
-
-  <!-- Team 2 Chat Support Menu Items -->
-
-
-
-  <!-- Team 3 CWL Menu Items -->
-
-  <mat-menu #subMenuCWL="matMenu" xPosition="after">
-    <button mat-menu-item [routerLink]="'/cwl-initial'">
-      <mat-icon style="color:dodgerblue;"> email</mat-icon>
-      Initial Comms
-    </button>
-  </mat-menu>
-
-  <mat-menu #subMenuCWLSide="matMenu" xPosition="after">
-    <button mat-menu-item (click)="sidenav.toggle()" [routerLink]="'/cwl-initial'">
-      <mat-icon style="color:dodgerblue"> email </mat-icon>
-      CWL Template
-    </button>
-  </mat-menu>
-
-  <!-- Team 3 CWL Menu Items -->
-
-  <!--The content below is only a placeholder and can be replaced.-->
-  <mat-toolbar class="navbar" style="float:top">
-    <mat-toolbar-row>
-      <button mat-button (click)="sidenav.toggle()" style="font-size:20px;" width="150px">
-        <mat-icon> menu</mat-icon>
-      </button><span>CXP Communications Tool</span>
-
-      <button mat-button [routerLink]="'/'">
-        <mat-icon> home</mat-icon>
-        Home
-      </button>
-      <button mat-button [matMenuTriggerFor]="rootMenu">
-        <mat-icon> list</mat-icon>
-        Template
-      </button>
-
-    </mat-toolbar-row>
-  </mat-toolbar>
-
-  <mat-sidenav-container class="flex-container">
-    <mat-sidenav #sidenav>
-      <mat-nav-list>
-        <a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/'">
-          <mat-icon style="color:dodgerblue"> home</mat-icon>
-        </a>
-        <a mat-list-item [matMenuTriggerFor]="rootMenuSide">
-          <mat-icon style="color:dodgerblue"> list</mat-icon>
-        </a>
-
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <div class="rootSize">
-        <router-outlet></router-outlet>
+<div class="flex-container">
+  <!-- <div class="header">
+    <div class="col-sm-6">
+      <div class="container">
+        <div style="display: inline;">
+          <img src="../assets/images/AzureCXPLogo.png">
+        </div>
+        <div style="display: inline; font-size: 20px; font-weight: 600; color: white;">
+          Azure CXP 
+        </div>
       </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    </div>
+    <div class="col-sm-6">
+      <img class="float-right" src="../assets/images/rightlogo.png" width="100" style="margin-right: 10px;">
+    </div>
+  </div> -->
+  <nav class="navbar navbar-expand-lg" style="background:#323130;">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/images/AzureCXPLogo.png" width="30" height="30" class="d-inline-block align-top">
+      Azure CXP
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="padding-left: 30px;">
+      <ul class="navbar-nav">
+        <li class="nav-item active" style="color: #fff">
+          <a class="nav-link" href="#" [routerLink]="['/home']">Home</a>
+        </li>
+  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            AME
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" [routerLink]="['/comms-initial']">Intial Communication</a>
+            <a class="dropdown-item" [routerLink]="['/comms-root']">Root Cause</a>
+          </div>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/cwl-initial']">Citical Watch List</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/chat-offline']">Chat Support</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <!--
-  <mat-toolbar style="background: silver; color:dodgerblue">
-    <mat-toolbar-row>
-       <mat-icon> copyright</mat-icon>
-         <h5>Microsoft Confidential-Internal only</h5>
-
-         <a mat-menu-item [routerLink]="'/about'"> About </a>
-         <a mat-menu-item [routerLink]="'/contacts'"> Contacts </a>
-         <a mat-menu-item [routerLink]="'/features'"> Features </a>
-
-     </mat-toolbar-row>
-   </mat-toolbar>
- -->
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

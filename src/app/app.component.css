@@ -1,36 +1,57 @@
-mat-toolbar {
-  background-color: dodgerblue;
-  color: white;
-  margin-top: 0px;;
-}
-
-toolbarClass {
-  font-weight: bold;
-}
-
-toolbarrow {
-  font-weight: bold;
-}
-
-
 .flex-container{
   display: flex;  
   width: 100vw;
-  height: 85vh;
-  
-  
+  height: 100vh;
+  flex-direction: column;
 }
 
-@media all and (max-width: 1920px){
-  .flex-container{   
-    height: 91vh;
+.toolbar{
+  height: 45px;
+  width: 100vw;    
+  border: 1px solid red;
+}
+
+/* .header{
+  height: 40px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-color:black;   
+  align-items: center;
+} */
+
+.headingStyle{
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  padding: 100px 0px 0px;
+  color: #fff;
+  font-weight: 600;
+}
+
+navbar-brand{
+  color: #fff;
+  font-weight: 600;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 20px;
+}
+
+.content{
+  width: 100vw;
+  height: auto;
+  /* background: #edeff3;   */
+  background-color: #fff;
+}
+
+@media all and (max-width: 1920px){  
+  .content{    
+    height: 96vh;
+    /* border: 1px solid;     */
   }
 }
 
-@media all and (max-width: 1280px){
-  .flex-container{   
-    height: 86vh;    
-  }
+@media all and (max-width: 1280px){ 
+}
 
-  
+.navbar-brand, .nav-link {
+  color: white !important;
 }
